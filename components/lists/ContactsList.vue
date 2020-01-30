@@ -21,6 +21,7 @@ export default {
 
 <style lang="stylus" scoped>
 .contacts-list {
+  box-sizing border-box
 
 }
 </style>
