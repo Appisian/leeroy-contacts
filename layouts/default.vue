@@ -1,55 +1,45 @@
 <template>
-  <div>
-    <nuxt />
+  <div class="__container">
+    <div class="__default">
+      <MainHeader />
+      <div class="__body">
+        <ContactsBlock />
+        <nuxt />
+      </div>
+    </div>
   </div>
 </template>
 
-<style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
+<script>
+import ContactsBlock from '@/components/blocks/ContactsBlock.vue';
+import MainHeader from '@/components/common/MainHeader.vue';
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-}
+export default {
+  components: {
+    ContactsBlock,
+    MainHeader,
+  },
+};
+</script>
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
+<style lang="stylus" scoped>
+.__container {
+  background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
+  .__default {
+    width: 1080px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+    .__body {
+      display: flex;
+      height: 700px;
+    }
+  }
 }
 </style>
