@@ -1,0 +1,9 @@
+imports:
+  - ./colors.yml
+  - ./font-size.yml
+  - ./breakpoints.yml
+  - ./fonts.yml
+
+global:
+  type: global
+  category: all

@@ -1,0 +1,9 @@
+props:
+  font_family_main:
+    value: Source Code Pro
+  font_family_secondary:
+    value: aktiv-grotesk, sans-serif
+  
+global:
+  type: font-family
+  category: fonts

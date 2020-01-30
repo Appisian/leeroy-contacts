@@ -1,0 +1,21 @@
+props:
+  bp_xs:
+    value: "0px"
+  bp_s:
+    value: "320px"
+  bp_m:
+    value: "620px"
+  bp_l:
+    value: "960px"
+  bp_xl:
+    value: "1200px"
+  bp_hd:
+    value: "1600px"
+  bp_mobile:
+    value: "960px"
+  bp_desktop:
+    value: "960px"
+
+global:
+  type: number
+  category: breakpoints

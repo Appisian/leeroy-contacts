@@ -1,0 +1,27 @@
+props:
+  font_size_oversize:
+    value: "8rem"
+  font_size_xx_large:
+    value: "7rem"
+  font_size_x_large:
+    value: "6rem"
+  font_size_large:
+    value: "6rem"
+  font_size_xx_medium:
+    value: "5rem"
+  font_size_x_medium:
+    value: "4rem"
+  font_size_medium:
+    value: "3rem"
+  font_size_xx_basic:
+    value: "2.2rem"
+  font_size_x_basic:
+    value: "1.8rem"
+  font_size_basic:
+    value: "1.6rem"
+  font_size_small:
+    value: "1.5rem"
+  
+global:
+  type: number
+  category: font-size

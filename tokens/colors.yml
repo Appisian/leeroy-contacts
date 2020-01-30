@@ -1,0 +1,37 @@
+props:
+  color_primary:
+    value: "#000000"
+  color_secondary:
+    value: "#ffffff"
+  color_tertiary:
+    value: "#4B4B4B"
+  color_quarternary:
+    value: "transparent"
+  color_gradient_primary_1:
+    value: "#4A53F0"
+  color_gradient_primary_2:
+    value: "#F867C6"
+  color_gradient_primary_3:
+    value: "#FF5451"
+  color_gradient_secondary_1:
+    value: "#FDE241"
+  color_gradient_secondary_2:
+    value: "#FE6F6F"
+  color_gradient_secondary_3:
+    value: "#FF4CB5"
+  color_gradient_tertiary_1:
+    value: "#00FAC1"
+  color_gradient_tertiary_2:
+    value: "#C500E1"
+  color_gradient_quaternary_1:
+    value: "#FFCD2C"
+  color_gradient_quaternary_2:
+    value: "#FF0663"
+  color_gradient_quinary_1:
+    value: "#FD8041"
+  color_gradient_quinary_2:
+    value: "#FF4CA1"
+
+global:
+  type: color
+  category: color
