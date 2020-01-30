@@ -1,96 +1,12 @@
 {
   "aliases": {},
   "props": {
-    "color_gradient_primary_1": {
-      "type": "color",
-      "category": "color",
-      "value": "rgb(74, 83, 240)",
-      "originalValue": "#4A53F0",
-      "name": "color_gradient_primary_1"
-    },
-    "color_gradient_primary_2": {
-      "type": "color",
-      "category": "color",
-      "value": "rgb(248, 103, 198)",
-      "originalValue": "#F867C6",
-      "name": "color_gradient_primary_2"
-    },
-    "color_gradient_primary_3": {
-      "type": "color",
-      "category": "color",
-      "value": "rgb(255, 84, 81)",
-      "originalValue": "#FF5451",
-      "name": "color_gradient_primary_3"
-    },
-    "color_gradient_quaternary_1": {
-      "type": "color",
-      "category": "color",
-      "value": "rgb(255, 205, 44)",
-      "originalValue": "#FFCD2C",
-      "name": "color_gradient_quaternary_1"
-    },
-    "color_gradient_quaternary_2": {
-      "type": "color",
-      "category": "color",
-      "value": "rgb(255, 6, 99)",
-      "originalValue": "#FF0663",
-      "name": "color_gradient_quaternary_2"
-    },
     "color_primary": {
       "type": "color",
       "category": "color",
-      "value": "rgb(0, 0, 0)",
-      "originalValue": "#000000",
+      "value": "rgb(237, 240, 244)",
+      "originalValue": "#EDF0F4",
       "name": "color_primary"
-    },
-    "color_quarternary": {
-      "type": "color",
-      "category": "color",
-      "value": "rgba(0, 0, 0, 0)",
-      "originalValue": "transparent",
-      "name": "color_quarternary"
-    },
-    "color_tertiary": {
-      "type": "color",
-      "category": "color",
-      "value": "rgb(75, 75, 75)",
-      "originalValue": "#4B4B4B",
-      "name": "color_tertiary"
-    },
-    "color_gradient_secondary_1": {
-      "type": "color",
-      "category": "color",
-      "value": "rgb(253, 226, 65)",
-      "originalValue": "#FDE241",
-      "name": "color_gradient_secondary_1"
-    },
-    "color_gradient_secondary_2": {
-      "type": "color",
-      "category": "color",
-      "value": "rgb(254, 111, 111)",
-      "originalValue": "#FE6F6F",
-      "name": "color_gradient_secondary_2"
-    },
-    "color_gradient_secondary_3": {
-      "type": "color",
-      "category": "color",
-      "value": "rgb(255, 76, 181)",
-      "originalValue": "#FF4CB5",
-      "name": "color_gradient_secondary_3"
-    },
-    "color_gradient_tertiary_1": {
-      "type": "color",
-      "category": "color",
-      "value": "rgb(0, 250, 193)",
-      "originalValue": "#00FAC1",
-      "name": "color_gradient_tertiary_1"
-    },
-    "color_gradient_tertiary_2": {
-      "type": "color",
-      "category": "color",
-      "value": "rgb(197, 0, 225)",
-      "originalValue": "#C500E1",
-      "name": "color_gradient_tertiary_2"
     },
     "color_secondary": {
       "type": "color",
@@ -99,19 +15,12 @@
       "originalValue": "#ffffff",
       "name": "color_secondary"
     },
-    "color_gradient_quinary_1": {
+    "color_tertiary": {
       "type": "color",
       "category": "color",
-      "value": "rgb(253, 128, 65)",
-      "originalValue": "#FD8041",
-      "name": "color_gradient_quinary_1"
-    },
-    "color_gradient_quinary_2": {
-      "type": "color",
-      "category": "color",
-      "value": "rgb(255, 76, 161)",
-      "originalValue": "#FF4CA1",
-      "name": "color_gradient_quinary_2"
+      "value": "rgb(75, 75, 75)",
+      "originalValue": "#4B4B4B",
+      "name": "color_tertiary"
     },
     "font_size_basic": {
       "type": "number",
