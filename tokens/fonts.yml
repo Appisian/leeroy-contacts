@@ -1,8 +1,8 @@
 props:
   font_family_main:
-    value: Source Code Pro
+    value: Open Sans, sans-serif
   font_family_secondary:
-    value: aktiv-grotesk, sans-serif
+    value: Amaranth
   
 global:
   type: font-family
