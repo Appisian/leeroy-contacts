@@ -28,5 +28,8 @@
   "emmet.includeLanguages": {
     "vue-html": "html"
   },
-  "editor.autoIndent": true
+  "editor.autoIndent": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }
