@@ -11,16 +11,30 @@
     "color_secondary": {
       "type": "color",
       "category": "color",
-      "value": "rgb(255, 255, 255)",
-      "originalValue": "#ffffff",
+      "value": "rgb(134, 168, 231)",
+      "originalValue": "#86A8E7",
       "name": "color_secondary"
     },
     "color_tertiary": {
       "type": "color",
       "category": "color",
-      "value": "rgb(75, 75, 75)",
-      "originalValue": "#4B4B4B",
+      "value": "rgb(209, 107, 165)",
+      "originalValue": "#D16BA5",
       "name": "color_tertiary"
+    },
+    "color_quaternary": {
+      "type": "color",
+      "category": "color",
+      "value": "rgb(95, 251, 241)",
+      "originalValue": "#5FFBF1",
+      "name": "color_quaternary"
+    },
+    "color_fifth": {
+      "type": "color",
+      "category": "color",
+      "value": "rgb(200, 206, 208)",
+      "originalValue": "#C8CED0",
+      "name": "color_fifth"
     },
     "font_size_basic": {
       "type": "number",
@@ -158,15 +172,15 @@
     "font_family_main": {
       "type": "font-family",
       "category": "fonts",
-      "value": "Source Code Pro",
-      "originalValue": "Source Code Pro",
+      "value": "Open Sans, sans-serif",
+      "originalValue": "Open Sans, sans-serif",
       "name": "font_family_main"
     },
     "font_family_secondary": {
       "type": "font-family",
       "category": "fonts",
-      "value": "aktiv-grotesk, sans-serif",
-      "originalValue": "aktiv-grotesk, sans-serif",
+      "value": "Amaranth",
+      "originalValue": "Amaranth",
       "name": "font_family_secondary"
     }
   }

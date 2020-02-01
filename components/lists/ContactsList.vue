@@ -1,6 +1,10 @@
 <template>
   <div class="contacts-list">
-    <ContactsListItem v-for="(contact, index) in contactsArray" :key="index" />
+    <ContactsListItem
+      v-for="(contact, index) in contacts"
+      :contact="contact"
+      :key="index"
+    />
   </div>
 </template>
 
@@ -11,16 +15,20 @@ export default {
   components: {
     ContactsListItem,
   },
-  data() {
-    return {
-      contactsArray: [1],
-    };
+  computed: {
+    contacts() {
+      return this.$store.state.contacts;
+    },
+  },
+  mounted() {
+    console.info(this.$store.state.contacts);
   },
 };
 </script>
 
 <style lang="stylus" scoped>
 .contacts-list {
+  box-sizing border-box
 
 }
 </style>
