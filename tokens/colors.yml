@@ -8,7 +8,7 @@ props:
   color_quaternary:
     value: "#5FFBF1"
   color_fifth:
-    value: "#C8CED0"
+    value: "#e74c3c"
   color_background_primary:
     value: "#4A5A6C"
   color_background_secondary:

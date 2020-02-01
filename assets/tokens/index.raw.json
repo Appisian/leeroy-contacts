@@ -60,8 +60,8 @@
     "color_fifth": {
       "type": "color",
       "category": "color",
-      "value": "rgb(200, 206, 208)",
-      "originalValue": "#C8CED0",
+      "value": "rgb(231, 76, 60)",
+      "originalValue": "#e74c3c",
       "name": "color_fifth"
     },
     "color_background_secondary": {

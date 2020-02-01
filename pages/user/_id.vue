@@ -3,7 +3,11 @@
     <UserPicture />
     <UserDescription :contact="contact" />
     <EditButton @editUser="editUser" />
-    <EditUserForm v-if="!triggerForm" />
+    <EditUserForm
+      v-if="triggerForm"
+      :contact="contact"
+      @cancelForm="cancelForm"
+    />
   </div>
 </template>
 
@@ -37,6 +41,9 @@ export default {
   methods: {
     editUser() {
       this.triggerForm = true;
+    },
+    cancelForm() {
+      this.triggerForm = false;
     },
   },
 };

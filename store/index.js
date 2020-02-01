@@ -1,4 +1,8 @@
-export const state = () => ({
+import * as actions from './actions';
+import * as getters from './getters';
+import * as mutations from './mutations';
+
+const state = () => ({
   contacts: [
     {
       id: 0,
@@ -44,3 +48,11 @@ export const state = () => ({
     },
   ],
 });
+
+export default {
+  namespaced: true,
+  state,
+  actions,
+  getters,
+  mutations,
+};
