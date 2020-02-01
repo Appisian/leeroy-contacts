@@ -1,8 +1,8 @@
 props:
   font_family_main:
-    value: Open Sans, sans-serif
+    value: Lato
   font_family_secondary:
-    value: Amaranth
+    value: Montserrat
   
 global:
   type: font-family

@@ -207,15 +207,15 @@
     "font_family_main": {
       "type": "font-family",
       "category": "fonts",
-      "value": "Open Sans, sans-serif",
-      "originalValue": "Open Sans, sans-serif",
+      "value": "Lato",
+      "originalValue": "Lato",
       "name": "font_family_main"
     },
     "font_family_secondary": {
       "type": "font-family",
       "category": "fonts",
-      "value": "Amaranth",
-      "originalValue": "Amaranth",
+      "value": "Montserrat",
+      "originalValue": "Montserrat",
       "name": "font_family_secondary"
     }
   }

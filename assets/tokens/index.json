@@ -28,6 +28,6 @@
   "bp_hd": "1600px",
   "bp_mobile": "960px",
   "bp_desktop": "960px",
-  "font_family_main": "Open Sans, sans-serif",
-  "font_family_secondary": "Amaranth"
+  "font_family_main": "Lato",
+  "font_family_secondary": "Montserrat"
 }
