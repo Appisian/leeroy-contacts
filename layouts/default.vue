@@ -29,7 +29,7 @@ export default {
     width: 1080px;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0 0 10px gray;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
     height: 700px;
     display: flex;
   }
