@@ -11,6 +11,14 @@ props:
     value: "#C8CED0"
   color_background_primary:
     value: "#4A5A6C"
+  color_background_secondary:
+    value: "#363E46"
+  color_background_tertiary:
+    value: "#ACADB1"
+  color_background_quaternary:
+    value: "#404953"
+  color_background_fifth:
+    value: "#FFFFFF"
 
 global:
   type: color
