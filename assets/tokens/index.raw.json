@@ -1,6 +1,13 @@
 {
   "aliases": {},
   "props": {
+    "color_background_fifth": {
+      "type": "color",
+      "category": "color",
+      "value": "rgb(255, 255, 255)",
+      "originalValue": "#FFFFFF",
+      "name": "color_background_fifth"
+    },
     "color_primary": {
       "type": "color",
       "category": "color",
@@ -8,12 +15,19 @@
       "originalValue": "#EDF0F4",
       "name": "color_primary"
     },
-    "color_secondary": {
+    "color_background_tertiary": {
       "type": "color",
       "category": "color",
-      "value": "rgb(134, 168, 231)",
-      "originalValue": "#86A8E7",
-      "name": "color_secondary"
+      "value": "rgb(172, 173, 177)",
+      "originalValue": "#ACADB1",
+      "name": "color_background_tertiary"
+    },
+    "color_background_primary": {
+      "type": "color",
+      "category": "color",
+      "value": "rgb(74, 90, 108)",
+      "originalValue": "#4A5A6C",
+      "name": "color_background_primary"
     },
     "color_tertiary": {
       "type": "color",
@@ -21,6 +35,20 @@
       "value": "rgb(209, 107, 165)",
       "originalValue": "#D16BA5",
       "name": "color_tertiary"
+    },
+    "color_background_quaternary": {
+      "type": "color",
+      "category": "color",
+      "value": "rgb(64, 73, 83)",
+      "originalValue": "#404953",
+      "name": "color_background_quaternary"
+    },
+    "color_secondary": {
+      "type": "color",
+      "category": "color",
+      "value": "rgb(134, 168, 231)",
+      "originalValue": "#86A8E7",
+      "name": "color_secondary"
     },
     "color_quaternary": {
       "type": "color",
@@ -35,6 +63,13 @@
       "value": "rgb(200, 206, 208)",
       "originalValue": "#C8CED0",
       "name": "color_fifth"
+    },
+    "color_background_secondary": {
+      "type": "color",
+      "category": "color",
+      "value": "rgb(54, 62, 70)",
+      "originalValue": "#363E46",
+      "name": "color_background_secondary"
     },
     "font_size_basic": {
       "type": "number",
@@ -172,15 +207,15 @@
     "font_family_main": {
       "type": "font-family",
       "category": "fonts",
-      "value": "Open Sans, sans-serif",
-      "originalValue": "Open Sans, sans-serif",
+      "value": "Lato",
+      "originalValue": "Lato",
       "name": "font_family_main"
     },
     "font_family_secondary": {
       "type": "font-family",
       "category": "fonts",
-      "value": "Amaranth",
-      "originalValue": "Amaranth",
+      "value": "Montserrat",
+      "originalValue": "Montserrat",
       "name": "font_family_secondary"
     }
   }

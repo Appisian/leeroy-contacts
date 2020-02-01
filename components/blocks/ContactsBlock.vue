@@ -23,6 +23,7 @@ export default {
   align-self stretch
   border-radius 10px 0 0 10px
   border-right 1px solid $color-primary
-  padding 20px 0 0 20px;
+  padding 20px 0 0 20px
   box-sizing border-box
+  background-color $color-background-secondary
 </style>

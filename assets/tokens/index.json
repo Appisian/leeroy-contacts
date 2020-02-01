@@ -1,9 +1,14 @@
 {
+  "color_background_fifth": "rgb(255, 255, 255)",
   "color_primary": "rgb(237, 240, 244)",
-  "color_secondary": "rgb(134, 168, 231)",
+  "color_background_tertiary": "rgb(172, 173, 177)",
+  "color_background_primary": "rgb(74, 90, 108)",
   "color_tertiary": "rgb(209, 107, 165)",
+  "color_background_quaternary": "rgb(64, 73, 83)",
+  "color_secondary": "rgb(134, 168, 231)",
   "color_quaternary": "rgb(95, 251, 241)",
   "color_fifth": "rgb(200, 206, 208)",
+  "color_background_secondary": "rgb(54, 62, 70)",
   "font_size_basic": "1.6rem",
   "font_size_oversize": "8rem",
   "font_size_medium": "3rem",
@@ -23,6 +28,6 @@
   "bp_hd": "1600px",
   "bp_mobile": "960px",
   "bp_desktop": "960px",
-  "font_family_main": "Open Sans, sans-serif",
-  "font_family_secondary": "Amaranth"
+  "font_family_main": "Lato",
+  "font_family_secondary": "Montserrat"
 }
