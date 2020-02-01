@@ -10,9 +10,9 @@ props:
   font_size_xx_medium:
     value: "5rem"
   font_size_x_medium:
-    value: "4rem"
+    value: "2.8rem"
   font_size_medium:
-    value: "3rem"
+    value: "2.4rem"
   font_size_xx_basic:
     value: "2.2rem"
   font_size_x_basic:

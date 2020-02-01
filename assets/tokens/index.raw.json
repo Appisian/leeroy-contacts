@@ -4,8 +4,8 @@
     "color_background_fifth": {
       "type": "color",
       "category": "color",
-      "value": "rgb(255, 255, 255)",
-      "originalValue": "#FFFFFF",
+      "value": "rgb(242, 247, 247)",
+      "originalValue": "#F2F7F7",
       "name": "color_background_fifth"
     },
     "color_primary": {
@@ -32,8 +32,8 @@
     "color_tertiary": {
       "type": "color",
       "category": "color",
-      "value": "rgb(209, 107, 165)",
-      "originalValue": "#D16BA5",
+      "value": "rgb(168, 184, 195)",
+      "originalValue": "#A8B8C3",
       "name": "color_tertiary"
     },
     "color_background_quaternary": {
@@ -88,8 +88,8 @@
     "font_size_medium": {
       "type": "number",
       "category": "font-size",
-      "value": "3rem",
-      "originalValue": "3rem",
+      "value": "2.4rem",
+      "originalValue": "2.4rem",
       "name": "font_size_medium"
     },
     "font_size_x_large": {
@@ -109,8 +109,8 @@
     "font_size_x_medium": {
       "type": "number",
       "category": "font-size",
-      "value": "4rem",
-      "originalValue": "4rem",
+      "value": "2.8rem",
+      "originalValue": "2.8rem",
       "name": "font_size_x_medium"
     },
     "font_size_xx_large": {

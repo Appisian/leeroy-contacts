@@ -4,7 +4,7 @@ props:
   color_secondary:
     value: "#ffffff"
   color_tertiary:
-    value: "#D16BA5"
+    value: "#A8B8C3"
   color_quaternary:
     value: "#5FFBF1"
   color_fifth:
@@ -18,7 +18,7 @@ props:
   color_background_quaternary:
     value: "#2F373F"
   color_background_fifth:
-    value: "#FFFFFF"
+    value: "#F2F7F7"
 
 global:
   type: color
