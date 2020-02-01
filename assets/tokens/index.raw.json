@@ -36,6 +36,13 @@
       "originalValue": "#C8CED0",
       "name": "color_fifth"
     },
+    "color_background_primary": {
+      "type": "color",
+      "category": "color",
+      "value": "rgb(74, 90, 108)",
+      "originalValue": "#4A5A6C",
+      "name": "color_background_primary"
+    },
     "font_size_basic": {
       "type": "number",
       "category": "font-size",

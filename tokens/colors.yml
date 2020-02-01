@@ -9,6 +9,8 @@ props:
     value: "#5FFBF1"
   color_fifth:
     value: "#C8CED0"
+  color_background_primary:
+    value: "#4A5A6C"
 
 global:
   type: color
