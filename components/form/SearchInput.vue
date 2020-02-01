@@ -14,7 +14,7 @@ export default {};
 
 <style lang="stylus" scoped>
 .search-input
-  margin: 0 20px 30px 0;
+  margin: 0 20px 30px 0
   position relative
 
   img
@@ -26,11 +26,18 @@ export default {};
     transform translateY(-50%)
 
   input
-    width 100%
+    width 250px
     height 40px
     box-sizing border-box
     outline: 0
-    border-radius 5px
-    border: 1px solid $color-primary
+    border-radius 40px
+    background-color $color-background-quaternary
+    border none
     padding 0 40px
+    font-size $font-size-basic
+    color $color-primary
+
+    &::placeholder {
+      color $color-primary
+    }
 </style>
