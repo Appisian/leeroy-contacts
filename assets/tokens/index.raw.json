@@ -18,8 +18,8 @@
     "color_background_tertiary": {
       "type": "color",
       "category": "color",
-      "value": "rgb(172, 173, 177)",
-      "originalValue": "#ACADB1",
+      "value": "rgb(64, 73, 83)",
+      "originalValue": "#404953",
       "name": "color_background_tertiary"
     },
     "color_background_primary": {
@@ -46,8 +46,8 @@
     "color_secondary": {
       "type": "color",
       "category": "color",
-      "value": "rgb(134, 168, 231)",
-      "originalValue": "#86A8E7",
+      "value": "rgb(255, 255, 255)",
+      "originalValue": "#ffffff",
       "name": "color_secondary"
     },
     "color_quaternary": {
