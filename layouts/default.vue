@@ -1,23 +1,18 @@
 <template>
   <div class="__container">
     <div class="__default">
-      <MainHeader />
-      <div class="__body">
-        <ContactsBlock />
-        <nuxt />
-      </div>
+      <ContactsBlock />
+      <nuxt />
     </div>
   </div>
 </template>
 
 <script>
 import ContactsBlock from '@/components/blocks/ContactsBlock.vue';
-import MainHeader from '@/components/common/MainHeader.vue';
 
 export default {
   components: {
     ContactsBlock,
-    MainHeader,
   },
 };
 </script>
@@ -35,11 +30,8 @@ export default {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 10px gray;
-
-    .__body {
-      display: flex;
-      height: 700px;
-    }
+    height: 700px;
+    display: flex;
   }
 }
 </style>
