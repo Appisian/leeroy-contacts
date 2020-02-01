@@ -28,11 +28,13 @@ export default {
   align-self stretch
   border-radius 10px 0 0 10px
   border-right 1px solid $color-primary
-  padding 30px
+  padding 30px 0
   box-sizing border-box
   background-color $color-background-secondary
 
   .form
     display flex
     justify-content space-between
+    padding 0 30px
+    box-sizing border-box
 </style>
