@@ -1,11 +1,11 @@
 {
   "color_background_fifth": "rgb(255, 255, 255)",
   "color_primary": "rgb(73, 83, 91)",
-  "color_background_tertiary": "rgb(172, 173, 177)",
+  "color_background_tertiary": "rgb(64, 73, 83)",
   "color_background_primary": "rgb(74, 90, 108)",
   "color_tertiary": "rgb(209, 107, 165)",
   "color_background_quaternary": "rgb(47, 55, 63)",
-  "color_secondary": "rgb(134, 168, 231)",
+  "color_secondary": "rgb(255, 255, 255)",
   "color_quaternary": "rgb(95, 251, 241)",
   "color_fifth": "rgb(200, 206, 208)",
   "color_background_secondary": "rgb(54, 62, 70)",
