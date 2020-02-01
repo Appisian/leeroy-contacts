@@ -1,6 +1,9 @@
 <template>
   <div class="contacts-block">
-    <SearchInput />
+    <div class="form">
+      <SearchInput />
+      <AddButton />
+    </div>
     <ContactsList />
   </div>
 </template>
@@ -8,11 +11,13 @@
 <script>
 import SearchInput from '@/components/form/SearchInput.vue';
 import ContactsList from '@/components/lists/ContactsList.vue';
+import AddButton from '@/components/buttons/AddButton.vue';
 
 export default {
   components: {
     SearchInput,
     ContactsList,
+    AddButton,
   },
 };
 </script>
@@ -23,7 +28,11 @@ export default {
   align-self stretch
   border-radius 10px 0 0 10px
   border-right 1px solid $color-primary
-  padding 20px 0 0 20px
+  padding 30px
   box-sizing border-box
   background-color $color-background-secondary
+
+  .form
+    display flex
+    justify-content space-between
 </style>
