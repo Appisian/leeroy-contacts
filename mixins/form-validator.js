@@ -15,7 +15,9 @@ export default {
       return regex.test(string);
     },
     isPhone(string) {
-      const regex = new RegExp(/^\+\d+$/);
+      const regex = new RegExp(
+        /^\d+$/, //eslint-disable-line
+      );
       console.info('phone', regex.test(string));
       return regex.test(string);
     },
