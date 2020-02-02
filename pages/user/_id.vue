@@ -1,6 +1,6 @@
 <template>
   <div class="__user">
-    <UserPicture />
+    <UserPicture :picture="contact.picture" />
     <UserDescription :contact="contact" />
     <EditButton @editUser="editUser" />
     <EditUserForm

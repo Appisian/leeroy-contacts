@@ -1,6 +1,6 @@
 <template>
   <nuxt-link :to="route" class="contact">
-    <div class="pic"></div>
+    <div :style="bg" class="pic" />
     <div class="info">
       <span v-text="fullname" />
     </div>
@@ -23,6 +23,11 @@ export default {
       return {
         name: this.contact.fullname,
         path: `/user/${this.contact.id}`,
+      };
+    },
+    bg() {
+      return {
+        'background-image': `url(${this.contact.picture})`,
       };
     },
   },
@@ -64,6 +69,8 @@ export default {
     width 40px
     height @width
     margin-right 30px
+    background-size cover
+    background-position center center
 
   .info
     span

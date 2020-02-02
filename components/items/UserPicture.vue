@@ -7,8 +7,7 @@ export default {
   props: {
     picture: {
       type: String,
-      default:
-        'https://www.medicalnewstoday.com/content/images/articles/322/322868/golden-retriever-puppy.jpg',
+      required: true,
     },
   },
   computed: {

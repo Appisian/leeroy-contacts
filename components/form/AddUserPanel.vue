@@ -3,29 +3,31 @@
     <div :class="['panel', { open: open }]" />
     <div v-if="open" class="form-wrapper">
       <form @submit="e.preventDefault()">
-        <label class="picture-file">
+        <label :class="['picture-file', { 'has-file': inputFileState }]">
           AJOUTER UNE IMAGE
-          <input type="file" />
+          <input @change="updateImage" type="file" />
         </label>
-        <label>
+        <label :class="{ error: !isName(firstname) && firstname.length > 0 }">
           <span>Prénom</span>
           <input v-model="firstname" type="text" />
         </label>
-        <label>
+        <label :class="{ error: !isName(lastname) && lastname.length > 0 }">
           <span>Nom</span>
           <input v-model="lastname" type="text" />
         </label>
-        <label>
+        <label :class="{ error: !isPhone(phone) && phone.length > 0 }">
           <span>Téléphone</span>
           <input v-model="phone" type="tel" />
         </label>
-        <label>
+        <label :class="{ error: !isMail(mail) && mail.length > 0 }">
           <span>Adresse mail</span>
           <input v-model="mail" type="email" />
         </label>
         <div class="buttons-wrapper">
           <button @click="cancelForm" class="cancel">Annuler</button>
-          <button @click="submit" class="add">Ajouter</button>
+          <button @click="submit" :class="['add', { valid: valid }]">
+            Ajouter
+          </button>
         </div>
       </form>
     </div>
@@ -33,7 +35,10 @@
 </template>
 
 <script>
+import formValidator from '@/mixins/form-validator.js';
+
 export default {
+  mixins: [formValidator],
   props: {
     open: {
       type: Boolean,
@@ -46,7 +51,19 @@ export default {
       lastname: '',
       phone: '',
       mail: '',
+      picture: '',
+      inputFileState: false,
     };
+  },
+  computed: {
+    valid() {
+      return (
+        this.isMail(this.mail) &&
+        this.isPhone(this.phone) &&
+        this.isName(this.firstname) &&
+        this.isName(this.lastname)
+      );
+    },
   },
   methods: {
     cancelForm(e) {
@@ -55,14 +72,34 @@ export default {
     },
     submit(e) {
       e.preventDefault();
+
+      if (!this.valid) return;
+
       const obj = {
         firstname: this.firstname,
-        lastname: this.lastname,
+        lastname: this.lastname.toUpperCase(),
         phone: this.phone,
         mail: this.mail,
+        picture: this.picture,
       };
       this.$store.dispatch('addContact', obj);
       this.$emit('closeUserPanel', null);
+    },
+    async updateImage(e) {
+      const file = e.target.files[0];
+      e.target.files.length > 0
+        ? (this.inputFileState = true)
+        : (this.inputFileState = false);
+
+      const toBase64 = (file) =>
+        new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.readAsDataURL(file);
+          reader.onload = () => resolve(reader.result);
+          reader.onerror = (error) => reject(error);
+        });
+
+      this.picture = await toBase64(file);
     },
   },
 };
@@ -105,6 +142,9 @@ export default {
       display block
       box-sizing border-box
 
+      &.error
+        color $color-fifth
+
       &.picture-file
         overflow hidden
         height 40px
@@ -116,6 +156,11 @@ export default {
         display block
         color $color-tertiary
         margin 0 auto 60px
+
+        &.has-file
+          color $color-secondary
+          background-color $color-tertiary
+
 
         &:hover
           color $color-secondary
@@ -156,8 +201,11 @@ export default {
           box-shadow 0 3px 0 #b5382d
 
         &.add
+          opacity .2
           background-color #2ecc71
           box-shadow 0 3px 0 #27ae60
+          &.valid
+            opacity 1
 
         &:hover
           box-shadow none
