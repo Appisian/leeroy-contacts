@@ -22,7 +22,7 @@ export default {
     route() {
       return {
         name: this.contact.fullname,
-        path: `user/${this.contact.id}`,
+        path: `/user/${this.contact.id}`,
       };
     },
   },
