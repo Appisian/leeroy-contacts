@@ -25,6 +25,9 @@
         <button @click="cancelForm" class="cancel">Annuler</button>
         <button @click="submit" class="validation">Enregistrer</button>
       </div>
+      <div class="delete-button-wrapper">
+        <button @click="removeUser" class="remove">Supprimer</button>
+      </div>
     </form>
   </div>
 </template>
@@ -59,6 +62,11 @@ export default {
         phone: this.phone,
         mail: this.mail,
       });
+    },
+    removeUser(e) {
+      e.preventDefault();
+      console.info('ok');
+      this.$emit('removeUser', null);
     },
   },
 };
@@ -146,4 +154,11 @@ export default {
       &:hover
         box-shadow none
         transform translateY(3px)
+
+  .delete-button-wrapper
+    text-align center
+    .remove
+      text-decoration underline
+      color $color-primary
+      margin-top 50px
 </style>

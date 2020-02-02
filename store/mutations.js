@@ -16,3 +16,10 @@ export const addContact = (state, obj) => {
   obj.id = id;
   state.contacts.push(obj);
 };
+
+export const removeContact = (state, id) => {
+  const filteredArray = state.contacts.filter(
+    (item) => Number(item.id) !== Number(id),
+  );
+  state.contacts = filteredArray;
+};

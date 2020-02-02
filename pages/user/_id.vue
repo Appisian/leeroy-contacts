@@ -6,6 +6,7 @@
     <EditUserForm
       v-if="triggerForm"
       :contact="contact"
+      @removeUser="removeUser"
       @cancelForm="cancelForm"
       @submitForm="submitForm"
     />
@@ -54,6 +55,10 @@ export default {
     submitForm(obj) {
       this.triggerForm = false;
       this.$store.dispatch('updateContact', obj);
+    },
+    removeUser() {
+      this.$store.dispatch('removeContact', this.id);
+      this.$router.push('/');
     },
   },
 };
