@@ -1,7 +1,7 @@
 <template>
   <div class="user-form">
     <form @submit="e.preventDefault()">
-      <label class="picture-file">
+      <label :class="['picture-file', { 'has-file': inputFileState }]">
         MODIFIER UNE IMAGE
         <input @change="updateImage" type="file" />
       </label>
@@ -52,6 +52,7 @@ export default {
       phone: this.contact.phone,
       mail: this.contact.mail,
       picture: this.contact.picture,
+      inputFileState: false,
     };
   },
   computed: {
@@ -89,6 +90,9 @@ export default {
     },
     async updateImage(e) {
       const file = e.target.files[0];
+      e.target.files.length > 0
+        ? (this.inputFileState = true)
+        : (this.inputFileState = false);
 
       const toBase64 = (file) =>
         new Promise((resolve, reject) => {
@@ -143,6 +147,10 @@ export default {
       display block
       color $color-background-primary
       margin 0 auto 60px
+
+      &.has-file
+        color $color-secondary
+        background-color $color-background-primary
 
       &:hover
         color $color-secondary

@@ -3,7 +3,7 @@
     <div :class="['panel', { open: open }]" />
     <div v-if="open" class="form-wrapper">
       <form @submit="e.preventDefault()">
-        <label class="picture-file">
+        <label :class="['picture-file', { 'has-file': inputFileState }]">
           AJOUTER UNE IMAGE
           <input @change="updateImage" type="file" />
         </label>
@@ -52,6 +52,7 @@ export default {
       phone: '',
       mail: '',
       picture: '',
+      inputFileState: false,
     };
   },
   computed: {
@@ -86,6 +87,9 @@ export default {
     },
     async updateImage(e) {
       const file = e.target.files[0];
+      e.target.files.length > 0
+        ? (this.inputFileState = true)
+        : (this.inputFileState = false);
 
       const toBase64 = (file) =>
         new Promise((resolve, reject) => {
@@ -152,6 +156,11 @@ export default {
         display block
         color $color-tertiary
         margin 0 auto 60px
+
+        &.has-file
+          color $color-secondary
+          background-color $color-tertiary
+
 
         &:hover
           color $color-secondary
