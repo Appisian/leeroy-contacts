@@ -39,7 +39,6 @@ export default {
   },
   data() {
     return {
-      id: this.contact.id,
       firstname: this.contact.firstname,
       lastname: this.contact.lastname,
       phone: this.contact.phone,
@@ -53,8 +52,8 @@ export default {
     },
     submit(e) {
       e.preventDefault();
-      this.$store.dispatch('updateContact', {
-        id: this.id,
+      this.$emit('submitForm', {
+        id: this.contact.id,
         firstname: this.firstname,
         lastname: this.lastname,
         phone: this.phone,

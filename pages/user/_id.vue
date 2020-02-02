@@ -7,6 +7,7 @@
       v-if="triggerForm"
       :contact="contact"
       @cancelForm="cancelForm"
+      @submitForm="submitForm"
     />
   </div>
 </template>
@@ -24,18 +25,23 @@ export default {
     EditButton,
     EditUserForm,
   },
+  computed: {
+    contact() {
+      return this.$store.getters.getContacts[this.index];
+    },
+  },
   asyncData({ store, params, error }) {
     const id = params.id;
-    const contact = store.state.contacts.filter(
+    const index = store.state.contacts.findIndex(
       (item) => Number(item.id) === Number(id),
-    )[0];
-    if (contact.length === 0) {
+    );
+    if (index === -1) {
       return error({ statusCode: 404, message: 'Page not found' });
     }
     return {
-      contact,
-      id,
       triggerForm: false,
+      index,
+      id,
     };
   },
   methods: {
@@ -44,6 +50,10 @@ export default {
     },
     cancelForm() {
       this.triggerForm = false;
+    },
+    submitForm(obj) {
+      this.triggerForm = false;
+      this.$store.dispatch('updateContact', obj);
     },
   },
 };

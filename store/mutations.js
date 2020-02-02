@@ -1,6 +1,9 @@
+import Vue from 'vue';
+
 export const setContact = (state, obj) => {
-  const findContact = state.contacts.findIndex(
+  console.info('mutation ', obj);
+  const index = state.contacts.findIndex(
     (item) => Number(item.id) === Number(obj.id),
   );
-  state.contacts[findContact] = obj;
+  Vue.set(state.contacts, index, obj);
 };

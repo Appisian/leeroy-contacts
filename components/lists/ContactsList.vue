@@ -17,11 +17,11 @@ export default {
   },
   computed: {
     contacts() {
-      return this.$store.state.contacts;
+      return this.$store.getters.getContacts;
     },
   },
   mounted() {
-    console.info(this.$store.state.contacts);
+    console.info(this.contacts);
   },
 };
 </script>

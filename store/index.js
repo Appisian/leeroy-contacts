@@ -1,3 +1,4 @@
+import Vuex from "vuex"; //eslint-disable-line
 import * as actions from './actions';
 import * as getters from './getters';
 import * as mutations from './mutations';
@@ -49,10 +50,13 @@ const state = () => ({
   ],
 });
 
-export default {
-  namespaced: true,
-  state,
-  actions,
-  getters,
-  mutations,
-};
+function createStore() {
+  return new Vuex.Store({
+    state,
+    getters,
+    actions,
+    mutations,
+  });
+}
+
+export default createStore;
