@@ -32,6 +32,7 @@ export default {
     box-shadow 0 0 5px rgba(0,0,0,.2)
     height 700px
     display flex
+    overflow hidden
 
     .__nuxt
       flex 1

@@ -20,15 +20,11 @@ export default {
       return this.$store.getters.getContacts;
     },
   },
-  mounted() {
-    console.info(this.contacts);
-  },
 };
 </script>
 
 <style lang="stylus" scoped>
-.contacts-list {
+.contacts-list
   box-sizing border-box
-
-}
+  overflow auto
 </style>
