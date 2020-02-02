@@ -4,12 +4,32 @@
       src="@/assets/images/svg/searching-magnifying-glass.svg"
       alt="search"
     />
-    <input type="text" placeholder="Rechercher" />
+    <input v-model="search" type="text" placeholder="Rechercher" />
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      search: '',
+    };
+  },
+  watch: {
+    search() {
+      const array = this.$store.getters.getContacts.filter((item) =>
+        `${item.firstname.toLowerCase()} ${item.lastname.toLowerCase()}`.includes(
+          this.search.toLowerCase(),
+        ),
+      );
+
+      this.search.length > 0
+        ? this.$store.dispatch('setInputState', true)
+        : this.$store.dispatch('setInputState', false);
+      this.$store.dispatch('setSearchContacts', array);
+    },
+  },
+};
 </script>
 
 <style lang="stylus" scoped>

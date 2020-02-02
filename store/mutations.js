@@ -21,5 +21,20 @@ export const removeContact = (state, id) => {
   const filteredArray = state.contacts.filter(
     (item) => Number(item.id) !== Number(id),
   );
+
+  if (state.searchContacts.length > 0) {
+    state.searchContacts = state.contacts.filter(
+      (item) => Number(item.id) !== Number(id),
+    );
+  }
+
   state.contacts = filteredArray;
+};
+
+export const setSearchContacts = (state, obj) => {
+  state.searchContacts = obj;
+};
+
+export const setInputState = (state, bool) => {
+  state.setInputState = bool;
 };
