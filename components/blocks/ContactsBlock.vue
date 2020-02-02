@@ -2,9 +2,10 @@
   <div class="contacts-block">
     <div class="form">
       <SearchInput />
-      <AddButton />
+      <AddButton @toggleUserPanel="toggleUserPanel" :open="addUserPanel" />
     </div>
     <ContactsList />
+    <AddUserPanel @closeUserPanel="toggleUserPanel" :open="addUserPanel" />
   </div>
 </template>
 
@@ -12,12 +13,24 @@
 import SearchInput from '@/components/form/SearchInput.vue';
 import ContactsList from '@/components/lists/ContactsList.vue';
 import AddButton from '@/components/buttons/AddButton.vue';
+import AddUserPanel from '@/components/form/AddUserPanel.vue';
 
 export default {
   components: {
     SearchInput,
     ContactsList,
     AddButton,
+    AddUserPanel,
+  },
+  data() {
+    return {
+      addUserPanel: false,
+    };
+  },
+  methods: {
+    toggleUserPanel() {
+      this.addUserPanel = !this.addUserPanel;
+    },
   },
 };
 </script>
@@ -28,9 +41,13 @@ export default {
   align-self stretch
   border-radius 10px 0 0 10px
   border-right 1px solid $color-primary
-  padding 30px 0
+  padding 30px 0 0
   box-sizing border-box
   background-color $color-background-secondary
+  position relative
+  overflow hidden
+  display flex
+  flex-direction column
 
   .form
     display flex

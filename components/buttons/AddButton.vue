@@ -1,15 +1,27 @@
 <template>
-  <nuxt-link to="/adduser" class="button">
+  <button @click="toggleUserPanel" :class="['button', { open: open }]">
     +
-  </nuxt-link>
+  </button>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    open: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  methods: {
+    toggleUserPanel() {
+      this.$emit('toggleUserPanel', null);
+    },
+  },
+};
 </script>
 
 <style lang="stylus" scoped>
-.button {
+.button
   width 40px
   height 40px
   background-color $color-background-quaternary
@@ -24,10 +36,15 @@ export default {};
   text-align center
   font-size $font-size-xx-basic
   transition background-color 250ms ease-out
+  position relative
+  z-index 3
 
-  &:hover {
+  &:hover
     background-color white
 
-  }
-}
+
+  &.open
+    transform rotate(45deg)
+    background-color $color-background-tertiary
+    color white
 </style>
