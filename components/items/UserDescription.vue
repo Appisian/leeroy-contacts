@@ -29,7 +29,7 @@ export default {
       return `${this.contact.firstname} ${this.contact.lastname}`;
     },
     job() {
-      return 'UX/UI Designer';
+      return this.contact.job;
     },
   },
 };

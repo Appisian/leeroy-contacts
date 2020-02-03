@@ -13,6 +13,10 @@
         <span>Nom</span>
         <input v-model="lastname" type="text" />
       </label>
+      <label>
+        <span>Job</span>
+        <input v-model="job" type="text" />
+      </label>
       <label :class="{ error: !isPhone(phone) && phone.length > 0 }">
         <span>Téléphone</span>
         <input v-model="phone" type="tel" />
@@ -51,6 +55,7 @@ export default {
       lastname: this.contact.lastname,
       phone: this.contact.phone,
       mail: this.contact.mail,
+      job: this.contact.job,
       picture: this.contact.picture,
       inputFileState: false,
     };
@@ -80,6 +85,7 @@ export default {
         firstname: this.firstname,
         lastname: this.lastname.toUpperCase(),
         phone: this.phone,
+        job: this.job,
         mail: this.mail,
         picture: this.picture,
       });
