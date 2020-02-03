@@ -24,17 +24,28 @@ export default {
   justify-content center
   align-items center
   height 100vh
-  padding: 0 20px
+
+  +desktop()
+    padding: 0 20px
 
   .__default
-    width 1080px
     background-color white
-    border-radius 10px
     box-shadow 0 0 5px rgba(0,0,0,.2)
-    height 700px
     display flex
     overflow hidden
+    width 100%
+    height 100%
+
+    +desktop()
+      height 700px
+      width 1080px
+      border-radius 10px
 
     .__nuxt
-      flex 1
+      position absolute
+      background-color white
+      +desktop()
+        flex 1
+        background-color none
+        position relative
 </style>

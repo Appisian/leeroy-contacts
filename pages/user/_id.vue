@@ -1,5 +1,6 @@
 <template>
   <div class="__user">
+    <BackButton />
     <UserPicture :picture="contact.picture" />
     <UserDescription :contact="contact" />
     <EditButton @editUser="editUser" />
@@ -19,6 +20,7 @@
 import UserPicture from '@/components/items/UserPicture.vue';
 import UserDescription from '@/components/items/UserDescription.vue';
 import EditButton from '@/components/buttons/EditButton.vue';
+import BackButton from '@/components/buttons/BackButton.vue';
 import EditUserForm from '@/components/form/EditUserForm.vue';
 
 export default {
@@ -27,6 +29,7 @@ export default {
     UserDescription,
     EditButton,
     EditUserForm,
+    BackButton,
   },
   computed: {
     contact() {
@@ -69,6 +72,16 @@ export default {
 <style lang="stylus" scoped>
 .__user
   width 100%
-  position relative
   padding 50px 30px
+  height 100%
+  display flex
+  flex-direction column
+  justify-content center
+  z-index 4
+  box-sizing border-box
+
+  +desktop()
+    display block
+    position relative
+    height auto
 </style>

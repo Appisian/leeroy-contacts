@@ -43,13 +43,20 @@ export default {
 .identity
   margin 30px 0
   text-align center
+  padding 0 20px
+
+  +desktop()
+    padding 0
 
   h1
     font-size $font-size-medium
     color $color-primary
-    width 500px
     margin 0 auto
     word-break break-all
+
+    +desktop()
+      width 500px
+
   h2
     font-size $font-size-xx-basic
     color $color-tertiary

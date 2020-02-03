@@ -24,6 +24,7 @@ export default {
 .button
   width 40px
   height 40px
+  min-width 40px
   background-color $color-background-quaternary
   border-radius 50%
   color $color-primary

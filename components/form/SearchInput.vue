@@ -36,6 +36,10 @@ export default {
 .search-input
   margin: 0 20px 30px 0
   position relative
+  width 100%
+
+  +desktop()
+    width auto
 
   img
     width 20px
@@ -46,7 +50,7 @@ export default {
     transform translateY(-50%)
 
   input
-    width 250px
+    width 100%
     height 40px
     box-sizing border-box
     outline: 0
@@ -56,6 +60,9 @@ export default {
     padding 0 40px
     font-size $font-size-basic
     color $color-primary
+
+    +desktop()
+      width 250px
 
     &::placeholder {
       color $color-primary
