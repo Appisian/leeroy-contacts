@@ -33,12 +33,15 @@ export default {
       return this.$store.getters.getInputState;
     },
     items() {
-      return this.searchContacts.length > 0 || this.inputState
-        ? this.searchContacts
-        : this.contacts;
+      return this.inputState ? this.searchContacts : this.contacts;
     },
     orderItems() {
       return _.orderBy(this.items, ['firstname'], ['asc']);
+    },
+  },
+  watch: {
+    contacts() {
+      console.info('ok');
     },
   },
 };
