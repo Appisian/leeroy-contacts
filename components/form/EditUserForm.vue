@@ -118,16 +118,20 @@ export default {
 .user-form
   background-color $color-background-fifth
   border-radius 0 10px 10px 0
-  width 300px
+  width 100%
   height 100%
   top 0
   right 0
-  position absolute
+  position fixed
   z-index 1
   box-sizing border-box
   padding 40px 20px
   overflow auto
   box-shadow -2px 0 5px rgba(0,0,0,.2)
+
+  +desktop()
+    width 300px
+    position absolute
 
   label
     font-family $font-family-main

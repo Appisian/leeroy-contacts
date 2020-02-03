@@ -72,8 +72,8 @@ export default {
 <style lang="stylus" scoped>
 .__user
   width 100%
+  min-height 100%
   padding 50px 30px
-  height 100%
   display flex
   flex-direction column
   justify-content center
@@ -81,6 +81,9 @@ export default {
   box-sizing border-box
 
   +desktop()
+    height 100%
+    min-height auto
+    overflow auto
     display block
     position relative
     height auto

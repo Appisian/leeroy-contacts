@@ -129,7 +129,7 @@ export default {
       transform scale(90)
 
   .form-wrapper
-    position absolute
+    position fixed
     z-index 1
     width 100%
     height 100%
@@ -139,6 +139,10 @@ export default {
     box-sizing border-box
     opacity: 0;
     animation fade 200ms linear 250ms forwards
+    overflow auto
+
+    +desktop()
+      position absolute
 
     label
       font-family $font-family-main

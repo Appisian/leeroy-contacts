@@ -79,6 +79,7 @@ export default {
     border-radius 50%
     width 40px
     height @width
+    min-width 40px
     margin-right 30px
     background-size cover
     background-position center center
@@ -87,9 +88,12 @@ export default {
     span
       font-size $font-size-basic
       color $color-secondary
-      width 200px
+      width 170px
       white-space nowrap
       text-overflow ellipsis
       display block
       overflow hidden
+
+      +desktop()
+        width 200px
 </style>

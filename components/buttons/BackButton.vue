@@ -18,4 +18,8 @@ export default {};
   position absolute
   top 20px
   left 20px
+  display block
+
+  +desktop()
+    display none
 </style>

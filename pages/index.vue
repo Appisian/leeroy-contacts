@@ -3,11 +3,12 @@
     <div class="description">
       <h1>SÉLECTIONNEZ UN CONTACT</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et
-        finibus lorem, eu tincidunt quam. Nulla vel imperdiet sapien. Integer
-        rutrum mauris laoreet, imperdiet risus quis, malesuada risus. Proin ut
-        fringilla libero. Aliquam ullamcorper magna sit amet eros bibendum, in
-        convallis eros ultricies.
+        Dans ce carnet d'adresses vous pouvez ajouter, modifier, supprimer et
+        rechercher des contacts. La persistance des données est gérée par le
+        VUEX, c'est-à-dire que si vous changez de route les données seront
+        toujours sauvegardées or si vous rechargez la page les données seront
+        perdues. Naviguez sur ce site aussi bien sur ordinateur que sur votre
+        tablette ou téléphone.
       </p>
     </div>
   </div>

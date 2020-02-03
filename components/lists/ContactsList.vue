@@ -29,7 +29,6 @@ export default {
       return this.$store.getters.getSearchContacts;
     },
     inputState() {
-      console.info(this.$store.getters.getInputState);
       return this.$store.getters.getInputState;
     },
     items() {

@@ -24,6 +24,7 @@ export default {
 
 <style lang="stylus" scoped>
 .picture
+  min-height 150px
   width 150px
   height @width
   border-radius 50%
