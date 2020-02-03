@@ -2,7 +2,7 @@
   <div class="contacts-list">
     <transition-group tag="div" name="list">
       <ContactsListItem
-        v-for="contact in items"
+        v-for="contact in orderItems"
         :active="Number(currentIndex) === Number(contact.id)"
         :contact="contact"
         :key="contact.id"
@@ -13,6 +13,7 @@
 
 <script>
 import ContactsListItem from '@/components/items/ContactsListItem.vue';
+const _ = require('lodash');
 
 export default {
   components: {
@@ -35,6 +36,9 @@ export default {
       return this.searchContacts.length > 0 || this.inputState
         ? this.searchContacts
         : this.contacts;
+    },
+    orderItems() {
+      return _.orderBy(this.items, ['firstname'], ['asc']);
     },
   },
 };
