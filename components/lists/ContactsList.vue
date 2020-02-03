@@ -39,11 +39,6 @@ export default {
       return _.orderBy(this.items, ['firstname'], ['asc']);
     },
   },
-  watch: {
-    contacts() {
-      console.info('ok');
-    },
-  },
 };
 </script>
 
