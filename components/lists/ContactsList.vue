@@ -1,13 +1,11 @@
 <template>
   <div class="contacts-list">
-    <transition-group tag="div" name="list">
-      <ContactsListItem
-        v-for="contact in orderItems"
-        :active="Number(currentIndex) === Number(contact.id)"
-        :contact="contact"
-        :key="contact.id"
-      />
-    </transition-group>
+    <ContactsListItem
+      v-for="contact in orderItems"
+      :active="Number(currentIndex) === Number(contact.id)"
+      :contact="contact"
+      :key="contact.id"
+    />
   </div>
 </template>
 
