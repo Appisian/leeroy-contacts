@@ -2,7 +2,7 @@
   <div class="add-user-panel">
     <div :class="['panel', { open: open }]" />
     <div v-if="open" class="form-wrapper">
-      <form @submit="e.preventDefault()">
+      <form ref="form" @submit="e.preventDefault()">
         <label :class="['picture-file', { 'has-file': inputFileState }]">
           AJOUTER UNE IMAGE
           <input @change="updateImage" type="file" />
@@ -90,6 +90,9 @@ export default {
       };
       this.$store.dispatch('addContact', obj);
       this.$emit('closeUserPanel', null);
+      this.firstname = this.lastname = this.phone = this.job = this.mail = '';
+      this.picture = null;
+      this.inputFileState = false;
     },
     async updateImage(e) {
       const file = e.target.files[0];
