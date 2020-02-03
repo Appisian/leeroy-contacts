@@ -137,6 +137,8 @@ export default {
     left 0
     padding 60px 30px
     box-sizing border-box
+    opacity: 0;
+    animation fade 200ms linear 250ms forwards
 
     label
       font-family $font-family-main
@@ -216,4 +218,16 @@ export default {
         &:hover
           box-shadow none
           transform translateY(3px)
+
+@keyframes fade {
+  0% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 </style>

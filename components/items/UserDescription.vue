@@ -1,8 +1,12 @@
 <template>
   <div>
     <div class="identity">
-      <h1 v-text="fullname" />
-      <h2 v-text="job" />
+      <transition name="slide-up" mode="out-in">
+        <h1 :key="fullname" v-text="fullname" />
+      </transition>
+      <transition name="slide-up" mode="out-in">
+        <h2 :key="job" v-text="job" />
+      </transition>
     </div>
     <UserButtons :phone="contact.phone" :mail="contact.mail" />
     <UserDetails :contact="contact" />
@@ -39,10 +43,20 @@ export default {
 .identity
   margin 30px 0
   text-align center
+  padding 0 20px
+
+  +desktop()
+    padding 0
 
   h1
     font-size $font-size-medium
     color $color-primary
+    margin 0 auto
+    word-break break-all
+
+    +desktop()
+      width 500px
+
   h2
     font-size $font-size-xx-basic
     color $color-tertiary

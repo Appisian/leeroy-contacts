@@ -1,10 +1,13 @@
 <template>
   <div class="contacts-list">
-    <ContactsListItem
-      v-for="(contact, index) in items"
-      :contact="contact"
-      :key="index"
-    />
+    <transition-group tag="div" name="list">
+      <ContactsListItem
+        v-for="contact in items"
+        :active="Number(currentIndex) === Number(contact.id)"
+        :contact="contact"
+        :key="contact.id"
+      />
+    </transition-group>
   </div>
 </template>
 
@@ -18,6 +21,9 @@ export default {
   computed: {
     contacts() {
       return this.$store.getters.getContacts;
+    },
+    currentIndex() {
+      return this.$route.params.id;
     },
     searchContacts() {
       return this.$store.getters.getSearchContacts;

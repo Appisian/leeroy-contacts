@@ -37,9 +37,8 @@ export default {
 
 <style lang="stylus" scoped>
 .contacts-block
-  width 375px
+  width 100%
   align-self stretch
-  border-radius 10px 0 0 10px
   border-right 1px solid $color-primary
   padding 30px 0 0
   box-sizing border-box
@@ -48,6 +47,9 @@ export default {
   overflow hidden
   display flex
   flex-direction column
+
+  +desktop()
+    width 375px
 
   .form
     display flex

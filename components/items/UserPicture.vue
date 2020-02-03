@@ -1,5 +1,7 @@
 <template>
-  <div :style="bg" class="picture" />
+  <transition name="fade" mode="out-in">
+    <div :style="bg" :key="picture" class="picture" />
+  </transition>
 </template>
 
 <script>

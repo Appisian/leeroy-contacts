@@ -21,9 +21,12 @@ export default {
 
 <style lang="stylus" scoped>
 .container
-  display flex
-  justify-content center
-  align-items center
+  display none
+
+  +desktop()
+    display flex
+    justify-content center
+    align-items center
 
   .description
 
