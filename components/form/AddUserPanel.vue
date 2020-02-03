@@ -1,40 +1,42 @@
 <template>
   <div class="add-user-panel">
     <div :class="['panel', { open: open }]" />
-    <div v-if="open" class="form-wrapper">
-      <form ref="form" @submit="e.preventDefault()">
-        <label :class="['picture-file', { 'has-file': inputFileState }]">
-          AJOUTER UNE IMAGE
-          <input @change="updateImage" type="file" />
-        </label>
-        <label :class="{ error: !isName(firstname) && firstname.length > 0 }">
-          <span>Prénom</span>
-          <input v-model="firstname" type="text" />
-        </label>
-        <label :class="{ error: !isName(lastname) && lastname.length > 0 }">
-          <span>Nom</span>
-          <input v-model="lastname" type="text" />
-        </label>
-        <label>
-          <span>Job</span>
-          <input v-model="job" type="text" />
-        </label>
-        <label :class="{ error: !isPhone(phone) && phone.length > 0 }">
-          <span>Téléphone</span>
-          <input v-model="phone" type="tel" />
-        </label>
-        <label :class="{ error: !isMail(mail) && mail.length > 0 }">
-          <span>Adresse mail</span>
-          <input v-model="mail" type="email" />
-        </label>
-        <div class="buttons-wrapper">
-          <button @click="cancelForm" class="cancel">Annuler</button>
-          <button @click="submit" :class="['add', { valid: valid }]">
-            Ajouter
-          </button>
-        </div>
-      </form>
-    </div>
+    <transition name="scale-fade" mode="out-in">
+      <div v-if="open" class="form-wrapper">
+        <form @submit="e.preventDefault()">
+          <label :class="['picture-file', { 'has-file': inputFileState }]">
+            AJOUTER UNE IMAGE
+            <input @change="updateImage" type="file" />
+          </label>
+          <label :class="{ error: !isName(firstname) && firstname.length > 0 }">
+            <span>Prénom</span>
+            <input v-model="firstname" type="text" />
+          </label>
+          <label :class="{ error: !isName(lastname) && lastname.length > 0 }">
+            <span>Nom</span>
+            <input v-model="lastname" type="text" />
+          </label>
+          <label>
+            <span>Job</span>
+            <input v-model="job" type="text" />
+          </label>
+          <label :class="{ error: !isPhone(phone) && phone.length > 0 }">
+            <span>Téléphone</span>
+            <input v-model="phone" type="tel" />
+          </label>
+          <label :class="{ error: !isMail(mail) && mail.length > 0 }">
+            <span>Adresse mail</span>
+            <input v-model="mail" type="email" />
+          </label>
+          <div class="buttons-wrapper">
+            <button @click="cancelForm" class="cancel">Annuler</button>
+            <button @click="submit" :class="['add', { valid: valid }]">
+              Ajouter
+            </button>
+          </div>
+        </form>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -127,9 +129,10 @@ export default {
     border-radius 50%
     transform-origin center center
     z-index 1
-    transition transform 500ms ease-in-out;
+    transform scale(1) rotate(.1deg)
+    transition transform 500ms linear;
     &.open
-      transform scale(90)
+      transform scale(90) rotate(.1deg)
 
   .form-wrapper
     position fixed
@@ -140,8 +143,6 @@ export default {
     left 0
     padding 60px 30px
     box-sizing border-box
-    opacity: 0;
-    animation fade 200ms linear 250ms forwards
     overflow auto
 
     +desktop()
@@ -225,16 +226,4 @@ export default {
         &:hover
           box-shadow none
           transform translateY(3px)
-
-@keyframes fade {
-  0% {
-    transform: scale(1.1);
-    opacity: 0;
-  }
-
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
 </style>

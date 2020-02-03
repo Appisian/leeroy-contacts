@@ -63,14 +63,24 @@
   transform: translateX(100px);
 }
 
-.list-item {
-  display: inline-block;
-  margin-right: 10px;
-}
 .list-enter-active, .list-leave-active {
   transition: all 750ms;
 }
 .list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */ {
   opacity: 0;
   transform: translateY(30px);
+}
+
+.scale-fade {
+
+
+
+}
+
+.scale-fade-enter-active, .scale-fade-leave-active {
+  transition: all 500ms;
+}
+.scale-fade-enter, .scale-fade-leave-to /* .list-leave-active below version 2.1.8 */ {
+  transform: scale(1.1);
+  opacity: 0;
 }
