@@ -1,9 +1,13 @@
 <template>
-  <nuxt-link :to="route" class="contact">
-    <div :style="bg" class="pic" />
-    <div class="info">
-      <span v-text="fullname" />
-    </div>
+  <nuxt-link :to="route" :class="['contact', { active: active }]">
+    <transition name="fade" mode="out-in">
+      <div :key="contact.picture" :style="bg" class="pic" />
+    </transition>
+    <transition name="slide-right" mode="out-in">
+      <div :key="fullname" class="info">
+        <span v-text="fullname" />
+      </div>
+    </transition>
   </nuxt-link>
 </template>
 
@@ -14,6 +18,10 @@ export default {
       type: Object,
       required: true,
     },
+    active: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     fullname() {
@@ -21,7 +29,6 @@ export default {
     },
     route() {
       return {
-        name: this.contact.fullname,
         path: `/user/${this.contact.id}`,
       };
     },
@@ -46,6 +53,10 @@ export default {
   transition background-color 300ms ease-out
   padding 0 30px
   box-sizing border-box
+
+  &.active {
+    background-color $color-background-tertiary
+  }
 
   &:hover {
     background-color $color-background-tertiary
@@ -76,4 +87,9 @@ export default {
     span
       font-size $font-size-basic
       color $color-secondary
+      width 200px
+      white-space nowrap
+      text-overflow ellipsis
+      display block
+      overflow hidden
 </style>

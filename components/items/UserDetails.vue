@@ -3,11 +3,15 @@
     <ul>
       <li>
         <Phone class="icon" />
-        <span v-text="phone" />
+        <transition name="slide-up" mode="out-in">
+          <span :key="phone" v-text="phone" />
+        </transition>
       </li>
       <li>
         <At class="icon" />
-        <span v-text="mail" />
+        <transition name="slide-up" mode="out-in">
+          <span :key="mail" v-text="mail" />
+        </transition>
       </li>
     </ul>
   </div>
@@ -57,4 +61,7 @@ export default {
         width 20px
         vertical-align middle
         margin-right 10px
+
+      span
+        display inline-block
 </style>

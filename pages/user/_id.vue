@@ -3,13 +3,15 @@
     <UserPicture :picture="contact.picture" />
     <UserDescription :contact="contact" />
     <EditButton @editUser="editUser" />
-    <EditUserForm
-      v-if="triggerForm"
-      :contact="contact"
-      @removeUser="removeUser"
-      @cancelForm="cancelForm"
-      @submitForm="submitForm"
-    />
+    <transition name="slide-left">
+      <EditUserForm
+        v-if="triggerForm"
+        :contact="contact"
+        @removeUser="removeUser"
+        @cancelForm="cancelForm"
+        @submitForm="submitForm"
+      />
+    </transition>
   </div>
 </template>
 
